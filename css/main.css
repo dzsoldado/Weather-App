@@ -38,8 +38,16 @@ a {
 p { 
   margin: 1.375rem 0;
 }
-#temperature{
+#change-unit{
   cursor:pointer;
+  color: rgba(255, 255, 255, 0.836);
+  transition-duration: 200ms;
+  font-size: smaller;
+}
+#change-unit:hover{
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 footer{

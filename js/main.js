@@ -4,12 +4,15 @@ $(document).ready(function(){
   var cel,feh;
         /* fahrenheit / celsius */
       $("#temperature").click(function(){
-        if ($("#unit").text()=="C"){
+        if ($("#unit").text()=="°C"){
           $("#temp").text(feh);
-          $("#unit").text("F");
-        }else if($("#unit").text()=="F"){
+          $("#unit").text("°F");
+          $("#change-unit").text("/ °C");
+          
+        }else if($("#unit").text()=="°F"){
           $("#temp").text(cel);
-          $("#unit").text("C");
+          $("#unit").text("°C");
+          $("#change-unit").text("/ °F");
         }
       });
   
@@ -33,10 +36,11 @@ $(document).ready(function(){
  
       $("#location").text(json.name+", "+json.sys.country);
       $("#weather").text(json.weather[0].main);
-      $("#temp").text(parseInt(json.main.temp)+"°");
-      $("#unit").text("C");
-      cel= parseInt(json.main.temp)+"°";
-      feh= parseInt(json.main.temp*1.8+38)+"°";
+      $("#temp").text(parseInt(json.main.temp));
+      $("#unit").text("°C");
+      $("#change-unit").text("/ °F");
+      cel= parseInt(json.main.temp);
+      feh= parseInt(json.main.temp*1.8+38);
       
       
 
