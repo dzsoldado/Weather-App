@@ -33,10 +33,10 @@ $(document).ready(function(){
  
       $("#location").text(json.name+", "+json.sys.country);
       $("#weather").text(json.weather[0].main);
-      $("#temp").text(json.main.temp+"°");
+      $("#temp").text(parseInt(json.main.temp)+"°");
       $("#unit").text("C");
-      cel= Math.round(json.main.temp/10)*10 +"°";
-      feh= Math.round((json.main.temp*1.8+38)*10)/10 +"°";
+      cel= parseInt(json.main.temp)+"°";
+      feh= parseInt(json.main.temp*1.8+38)+"°";
       
       
 
